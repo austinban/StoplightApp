@@ -19,18 +19,10 @@ const colorArray: Color[] = ['green', 'yellow', 'red']
 const StopLight = ({ lights, lightSchema = colorArray }: OwnProps) => {
   const [activeIndex, setActiveIndex] = useState(0)
 
-  // Whenever you change the light sequence, reset to the beginning of the sequence
   useEffect(() => {
-    setActiveIndex(0)
-  }, [lights])
-
-  useEffect(() => {
-    const timeout = setTimeout(
-      () => {
-        incrementLight()
-      },
-      lights[activeIndex]?.time,
-    )
+    const timeout = setTimeout(() => {
+      incrementLight()
+    }, lights[activeIndex].time)
 
     return () => clearTimeout(timeout)
   }, [activeIndex])
