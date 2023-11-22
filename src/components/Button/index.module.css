@@ -1,0 +1,24 @@
+.wrapper {
+  padding: 1.25em 2em;
+  border-radius: 1em;
+  font-size: 0.8em;
+  margin: 10px 10px 10px 0;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-weight: 800;
+  font-family: Dosis, sans-serif;
+  border: none;
+  background-color: black;
+  color: #fff;
+  &:hover {
+    transform: scale(1.03);
+  }
+  &:active {
+    transform: scale(1.02);
+  }
+  &.secondary {
+    background: grey;
+  }
+}

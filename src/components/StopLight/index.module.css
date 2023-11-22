@@ -1,0 +1,24 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.light {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background: grey;
+  border: 2px inset black;
+  &.active {
+    &.yellow {
+      background: yellow;
+    }
+    &.green {
+      background: green;
+    }
+    &.red {
+      background: red;
+    }
+  }
+}
